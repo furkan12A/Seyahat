@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Seyahat.Models.Model.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kategori.KategoriAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Başlık)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Icerik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kategori.KategoriAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Başlık)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Icerik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResimURL)
+        </td>
+        <td>
+            @Html.ActionLink("Güncelle", "Edit", new { id=item.BlogId }) |
+            @Html.ActionLink("Deyat", "Details", new { id=item.BlogId }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.BlogId })
+        </td>
+    </tr>
+}
+
+</table>

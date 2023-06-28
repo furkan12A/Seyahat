@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="~/NiceAdmin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="~/NiceAdmin/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="~/NiceAdmin/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="~/NiceAdmin/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="~/NiceAdmin/css/style.css" rel="stylesheet">
+    <link href="~/NiceAdmin/css/style-responsive.css" rel="stylesheet" />
+</head>
+<body>
+
+    < <form class="login-form" method="post" action="~/Admin/Login/">
+        <div class="login-wrap">
+            <p class="alert alert-danger"  @ViewBag.Uyari/>
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_profile"></i></span>
+                <input type="text" name="Epsota" class="form-control" placeholder="Eposta" autofocus>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" name="Sifre" class="form-control" placeholder="Şifre">
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Giriş Yap</button>
+     
+        </div>
+    </form>
+
+  
+
+</body>
+</html>
